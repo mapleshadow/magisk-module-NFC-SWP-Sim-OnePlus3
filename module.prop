@@ -1,6 +1,6 @@
 id=oneplus3NFCSimEnabler
-name=OnePlus 3/3T NFC Sim Enabler
-version=v1
+name=OnePlus 3 NFC Sim Enabler
+version=v1.4
 versionCode=1
 author=snowwolf725
-description=Replace SmartcardService to enable NFC SIM feature
+description=Enable NFC SIM feature for OnePlus 3T

@@ -34,7 +34,7 @@ MODID=oneplus3NFCSimEnabler
 AUTOMOUNT=true
 
 # Set to true if you need to load system.prop
-PROPFILE=false
+PROPFILE=true
 
 # Set to true if you need post-fs-data script
 POSTFSDATA=false
@@ -50,7 +50,7 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*************************************"
-  ui_print "     OnePlus 3/3T NFC SIM Enabler    "
+  ui_print "       OnePlus 3T NFC SIM Enabler    "
   ui_print "*************************************"
 }
 
@@ -74,7 +74,7 @@ REPLACE="
 # Construct your own list here, it will overwrite the example
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
-/system/priv-app/SmartcardService/SmartcardService.apk
+/system/etc/libnfc-nxp.conf
 "
 
 ##########################################################################################
@@ -86,7 +86,6 @@ REPLACE="
 set_permissions() {
   # Default permissions, don't remove them
   set_perm_recursive  $MODPATH  0  0  0755  0644
-  set_perm_recursive  $MODPATH/system/priv-app/SmartcardService/SmartcardService.apk       0       0       0755            0644
 
   # Only some special files require specific permissions
   # The default permissions should be good enough for most cases
